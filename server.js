@@ -5,6 +5,8 @@ require('dotenv').config();
 const app = express();
 app.use(cors());
 app.use(express.json());
+import playersRoutes from './routes/players.js';
+app.use('/players', playersRoutes);
 app.use(express.urlencoded({ extended: true }));
 
 // Rotas

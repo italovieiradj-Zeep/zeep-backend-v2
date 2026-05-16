@@ -2,6 +2,9 @@
   "name": "zeep-backend-v2",
   "version": "2.0.0",
   "description": "Backend Zeep v2 com Node.js, Express e Supabase",
+
+  "type": "module",
+
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

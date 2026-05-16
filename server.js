@@ -1,7 +1,6 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
-
 dotenv.config();
 
 import playersRoutes from './routes/players.js';
@@ -23,8 +22,9 @@ app.use('/sac', sacRoutes);
 app.use('/tts', ttsRoutes);
 app.use('/billing', billingRoutes);
 
-const port = process.env.PORT || 3000;
+// Porta correta para o Railway
+const PORT = process.env.PORT || 3000;
 
-app.listen(port, () => {
-  console.log(`Zeep Backend v2 rodando na porta ${port}`);
+app.listen(PORT, () => {
+  console.log(`Zeep Backend v2 rodando na porta ${PORT}`);
 });

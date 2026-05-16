@@ -17,7 +17,9 @@ router.post('/create', async (req, res) => {
       .from('players')
       .insert([{ name, device_id }]);
 
-    if (error) return res.status(400).json({ error: error.message });
+    if (error) {
+      return res.status(400).json({ error: error.message });
+    }
 
     res.json({ message: 'Player criado com sucesso!', data });
   } catch (err) {
@@ -32,7 +34,9 @@ router.get('/list', async (req, res) => {
       .from('players')
       .select('*');
 
-    if (error) return res.status(400).json({ error: error.message });
+    if (error) {
+      return res.status(400).json({ error: error.message });
+    }
 
     res.json(data);
   } catch (err) {
